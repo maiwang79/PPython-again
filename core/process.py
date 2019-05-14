@@ -39,7 +39,7 @@ def z_encode(p):
     """
     encode param from python data
     """
-    if type(p) == "<class 'NoneType'>":                               #None->PHP中的NULL
+    if p is None:                               #None->PHP中的NULL
         return "N;"
     elif isinstance(p, int):                    #int->PHP整形
         return "i:%d;" % p
